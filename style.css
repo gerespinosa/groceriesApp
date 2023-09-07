@@ -14,10 +14,20 @@ font-size: 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: cadetblue;
+    background-color: burlywood;
     height: 100vh;
     width: 100%;
-    gap: 50px;
+    gap: 200px;
+}
+
+#logo {
+  z-index: 100;
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+  margin: 5vh 30vh;
+  position: absolute;
+  top: 0;
 }
 
 .loader {
@@ -118,6 +128,8 @@ body img{
     height: 100%;
     opacity: 0.3;
 }
+
+
 
 .main{
     display: flex;
