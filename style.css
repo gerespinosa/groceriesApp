@@ -102,11 +102,11 @@ font-size: 20px;
 
 /* HEADER */
 header {
-    background-color: cadetblue;
-    width: 100%;
-    text-align: center;
-    border-bottom: brown 4px solid;
-    color: black;
+  background-color: cadetblue;
+  width: 100%;
+  text-align: center;
+  border-bottom: brown 4px solid;
+  color: black;
 }
 
 header h1{
@@ -158,12 +158,12 @@ body img{
   font-size: smaller;
 }
 .mainContainer{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 0 5vw;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 5vw;
 }
 .itemName{
   width: 70%;
@@ -177,72 +177,63 @@ body img{
   border: none;  
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* BUTTON CONTAINER */
 .buttonContainer{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    margin-top: 2vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  margin-top: 2vh;
 }
 
 .buttonContainer i{
-  font-size: 2rem;
-  padding: 10px 12px;
-}
+    font-size: 2rem;
+    padding: 10px 12px;
+  }
 
 /* ADD MORE */
 
 #add {
-    position: sticky;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    border-radius: 50%;
-    background-color: cadetblue;
-    border: 0px;
-    color: burlywood;
-    cursor: pointer;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  border-radius: 50%;
+  background-color: cadetblue;
+  border: 0px;
+  color: burlywood;
+  cursor: pointer;
 }
 
 /* REMOVE */
 #remove {
-    position: sticky;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    border-radius:50%;
-    background-color: cadetblue;
-    border: 0px;
-    color: burlywood;
-    cursor: pointer;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  border-radius:50%;
+  background-color: cadetblue;
+  border: 0px;
+  color: burlywood;
+  cursor: pointer;
 }
 
+@media (max-width: 610px){
+  header h1{
+    font-size: 2rem;
+  }
 
+  .quantity{
+    width: 20%;
+  }
+}
 
+@media (max-width: 376px){
+  header h1{
+    font-size: 1.3rem;
+  }
+}
 
