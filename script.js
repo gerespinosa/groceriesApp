@@ -1,59 +1,56 @@
+const addedRows = [];
 // ADD NEW ITEMS
-const button = document.getElementById('button')
-const container = document.getElementById('container')
+function addItem() {
+  const mainContainer = document.getElementById('mainContainer')
+  const texto = document.getElementById('texto')
+  const remove = document.getElementById('remove')
 
-button.addEventListener('click', function(){
-    const newRow = document.createElement('div');
-        newRow.className=('container');
+  const newRow = document.createElement('div');
+        newRow.className=('mainContainer');
         newRow.style.display = 'flex';
-        newRow.style.justifyContent = 'space-between';
 
-    const checkBox = document.createElement('input');
-        checkBox.type = 'checkbox';
-        checkBox.className = 'checkBox';
-        checkBox.style.display = 'flex';
+    const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.className = 'checkbox';
+        checkbox.style.display = 'flex';
 
     const itemName = document.createElement('input');
         itemName.type = 'text';
         itemName.className = 'itemName';
         itemName.placeholder = 'Item';
-        itemName.style.width = '70vw';
-        itemName.style.marginLeft = '4vw';
 
-    const quantity = document.createElement('input');
-        quantity.type = 'number';
-        quantity.className = 'quantity';
-        quantity.placeholder = 'Qty';
-        quantity.style.width = '12vw';
-        quantity.style.display = 'flex';
-        quantity.style.marginLeft = '7vw';
+    const qty = document.createElement('input');
+        qty.type = 'number';
+        qty.className = 'quantity';
+        qty.placeholder = 'Qty';
 
-    newRow.appendChild(checkBox);
+    newRow.appendChild(checkbox);
     newRow.appendChild(itemName);
-    newRow.appendChild(quantity);
+    newRow.appendChild(qty);
 
-    container.appendChild(newRow);
+    mainContainer.appendChild(newRow);
+    addedRows.push(newRow);
+    texto.textContent= "";
 
-    container.style.justifyContent = 'space-between';
-    container.style.display = 'flex';
-    container.style.alignItems = 'center';
-    container.style.flexWrap = 'wrap';
-    container.style.paddingLeft = '2vw';
+// LINE-THROUGH COMPLETED ITEMS
+  checkbox.addEventListener('change', function () {
+    if (checkbox.checked) {
+      itemName.style.textDecoration = 'line-through';
+      qty.style.textDecoration = 'line-through';
+    } else {
+      itemName.style.textDecoration = 'none';
+      qty.style.textDecoration = 'none';
+    }
 
-  // LINE-THROUGH COMPLETED ITEMS
-    checkBox.addEventListener('change', function() {
-        if (checkBox.checked) {
-          itemName.style.textDecoration = 'line-through';
-        } else {
-          itemName.style.textDecoration = 'none';
-        }
-      });
-})
+  })};
+  
+// REMOVE LAST ROW
+function removeRow(){
+  if(addedRows.length > 0) {
+    const lastRow = addedRows.pop(); 
+    lastRow.remove();
+  }
+}
 
-// CLEAN SCREEN
-const removeButton = document.getElementById('remove');
 
-removeButton.addEventListener('click', function(){
-  container.innerHTML = "";
-});
 

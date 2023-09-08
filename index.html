@@ -16,34 +16,43 @@
     </div>
     <!-- HEADER -->
     <header>
-        <h1 class="title">Groceries App</h1>
+        <h1 class="title">groceries app</h1>
     </header>
 
     <!-- BACKGROUND -->
     <img src="/img/background.jpg" alt="">
+    
     <!-- MAIN -->
-    <div class="main">
-        <div class="date-cont">
+    <div class="main" id="main">
+        <div class="date-container">
             <input type="date" class="date">
         </div>
-
-        <div id="container" class="container">
+        <div class="main-container" id="mainContainer">
+            <h3 id="texto">Click on "+" for adding your first item</h3>
+            <!-- <input type="checkbox" id="checkbox">
+            <input type="text" id="item" placeholder="Item">
+            <input type="number" id="qty" placeholder="Qty"> -->
         </div>
+    </div>
 
 
+        <!-- BUTTON CONTAINER -->
         <div class="buttonContainer">
             <!-- ADD BUTTON -->
-            <button id="button">+</button>
+            <button id="add" onclick="addItem()"><i class="fa-solid fa-plus"></i></button>
 
             <!-- REMOVE OPTION -->
-            <button id="remove">-</button>
+            <button id="remove" onclick="removeRow()"><i class="fa-solid fa-minus"></i></button>
         </div>
+
     </div>
     </div>
     </div>
 
     <script src="script.js" defer></script>
     <script src="carga.js"></script>
+    <script src="https://kit.fontawesome.com/8a1d41889d.js" crossorigin="anonymous"></script>
+    
 </body>
 
 </html>
