@@ -156,6 +156,7 @@ body img{
   font-style: italic;
   color: grey;
   font-size: smaller;
+  padding: 0 5%;
 }
 .mainContainer{
   display: flex;
