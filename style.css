@@ -124,23 +124,41 @@ body{
 
 
 body img{
-    z-index: -10;
+    z-index: -20;
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0.3;
 }
 
+.main .top-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* BUTTONS */
+.main .top-container .buttons {
+  position: relative;
+  padding: 5%;
+  display: flex;
+  gap: 20%;
+}
+.main .top-container .buttons button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 
 /* DATE */
-.date-container{
+.top-container .date-container{
   position: relative;
   display: flex;
   justify-content: right;
-  padding: 5% 5%;
+  padding: 5%;
 }
 
-.date-container input{
+.top-container .date-container input{
   font-weight: 200;
   font-size: 0.8rem;
   text-align: center;
@@ -185,13 +203,58 @@ body img{
   justify-content: space-around;
   align-items: center;
   position: relative;
-  margin-top: 2vh;
+  margin: 2vh 0;
 }
 
 .buttonContainer i{
     font-size: 2rem;
     padding: 10px 12px;
   }
+
+/* STORED LIST */
+.list-List{
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 30%;
+  width: 100%;
+  z-index: 100;
+  background-color: cadetblue;
+  box-shadow: 2px 2px 5px black;
+}
+
+.list-List .listTop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2%;
+}
+
+.list-List .listTop h3{
+  text-decoration: underline;
+  padding: 0 2%;
+  text-align: center;
+  color: burlywood;
+}
+
+.list-List .listTop button{
+  padding: 0 2%;
+  text-align: center;
+  color: burlywood;
+  background: none;
+  border: none;
+}
+
+.list-List .storedList{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 4%;
+}
+
 
 /* ADD MORE */
 
@@ -206,6 +269,7 @@ body img{
   border: 0px;
   color: burlywood;
   cursor: pointer;
+  box-shadow: 2px 2px 5px black;
 }
 
 /* REMOVE */
@@ -220,6 +284,7 @@ body img{
   border: 0px;
   color: burlywood;
   cursor: pointer;
+  box-shadow: 2px 2px 5px black;
 }
 
 @media (max-width: 610px){
@@ -236,5 +301,14 @@ body img{
   header h1{
     font-size: 1.3rem;
   }
+
+  .list-List .listTop{
+    flex-direction: column;
+  }
+
+  .list-List .storedList{
+    text-align: center;
+  }
+
 }
 

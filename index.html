@@ -20,12 +20,19 @@
     </header>
 
     <!-- BACKGROUND -->
-    <img src="/img/background.jpg" alt="">
+    <img src="/img/background.jpg" alt="" class="background">
     
     <!-- MAIN -->
     <div class="main" id="main">
-        <div class="date-container">
-            <input type="date" class="date">
+        <div class="top-container">
+            <div class="buttons">
+                <button id="saveList" onclick="saveList()"><i class="fa-solid fa-floppy-disk"></i></button>
+                <button id="loadList" onclick="loadList()"><i class="fa-solid fa-hard-drive"></i></button>
+                <button id="clearButton"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="date-container">
+                <input type="date" class="date">
+            </div>
         </div>
         <div class="main-container" id="mainContainer">
             <h3 id="texto">Click on "+" for adding your first item</h3>
@@ -35,15 +42,24 @@
         </div>
     </div>
 
+    <!-- BUTTON CONTAINER -->
+    <div class="buttonContainer">
+        <!-- ADD BUTTON -->
+        <button id="add" onclick="addItem()"><i class="fa-solid fa-plus"></i></button>
+        
+        <!-- REMOVE OPTION -->
+        <button id="remove" onclick="removeRow()"><i class="fa-solid fa-minus"></i></button>
+    </div>
 
-        <!-- BUTTON CONTAINER -->
-        <div class="buttonContainer">
-            <!-- ADD BUTTON -->
-            <button id="add" onclick="addItem()"><i class="fa-solid fa-plus"></i></button>
-
-            <!-- REMOVE OPTION -->
-            <button id="remove" onclick="removeRow()"><i class="fa-solid fa-minus"></i></button>
+    <!-- LIST LIST -->
+    <div class="list-List" id="listContainer">
+        <div class="listTop">
+            <h3>Saved List</h3>
+            <button onclick="closeList()"><i class="fa-solid fa-x"></i></button>
         </div>
+        <div class="storedList" id="storedList">
+        </div>
+    </div>
 
     </div>
     </div>
@@ -54,5 +70,4 @@
     <script src="https://kit.fontawesome.com/8a1d41889d.js" crossorigin="anonymous"></script>
     
 </body>
-
 </html>
