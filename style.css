@@ -41,7 +41,19 @@ font-size: 20px;
     animation: mulShdSpin 1.3s infinite linear;
     transform: translateZ(0);
   }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
   
+  .footer h4{
+    font-size: 11px;
+  }
+
   @keyframes mulShdSpin {
     0%,
     100% {
@@ -305,6 +317,7 @@ body img{
 
   .list-List .listTop{
     flex-direction: column;
+    gap: 10px;
   }
 
   .list-List .storedList{
